@@ -392,6 +392,56 @@
     <!-- ============== Slider Section Start  ============== -->
 
     <section class="sliders">
+        <!-- <div class="container">
+            <div class="row">
+                <div class="owl-carousel" id="facts">
+                    <div class="item"><strong>150,000,000</strong>
+                        <p>Words Proofread</p>
+                    </div>
+                    <div style="width: 481px;" class="item"><strong>7000+</strong>
+                        <p>SOPs Delivered</p>
+                    </div>
+                    <div style="width: 481px;" class="item"><strong>127+</strong>
+                        <p>Highly Qualified SOP Experts</p>
+                    </div>
+                    <div class="item"><strong>24 hours</strong>
+                        <p>Quick Turnaround Time</p>
+                    </div>
+                    <div style="width: 320px;" class="item"><strong>95%</strong>
+                        <p>SOP Acceptance Rate &amp; Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="container">
+            <div class="row">                
+                <div class="col-12">
+                    <div class="inner">
+                        <div class="counter">
+                            <h4><span data-count="15000">0</span></h4>
+                            <p>Words Proofread</p>
+                        </div>
+                        <div class="counter">
+                            <h4><span data-count="7000">0</span>+</h4>
+                            <p>SOPs Delivered</p>
+                        </div>
+                        <div class="counter">
+                            <h4><span data-count="127">0</span>+</h4>
+                            <p>Highly Qualified SOP Experts</p>
+                        </div>
+                        <div class="counter">
+                            <h4><span data-count="24">0</span> hours</h4>
+                            <p>Quick Turnaround Time</p>
+                        </div>
+                        <div class="counter">
+                            <h4><span data-count="95">0</span>%</h4>
+                            <p>SOP Acceptance Rate &amp; Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -552,6 +602,47 @@
     </section>
 
     <!-- ============== Countrie Section  End  ============== -->
+
+
+
+
+
+    <script>
+
+        const counter = document.querySelectorAll(".counter span");
+        const container = document.querySelector(".counter");
+
+        let activated = false;
+
+        window.addEventListener("scroll", ()=>{
+            if(pageYOffset > container.offsetTop - container.offsetHeight -200 && activated === false){
+                counter.forEach(counter =>{
+                    counter.innerText = 0;
+                    let count = 0;
+
+                    function updateCount() {
+                        const target = parseInt(counter.dataset.count);
+                        if(count < target){
+                            count++;
+
+                            counter.innerText = count;
+                            setTimeout(updateCount, .1)
+                        }
+                        else{
+                            counter.innerText = target
+                        }
+                    }
+                    updateCount();
+                    activated = true
+                })
+            }
+        })
+
+
+
+
+    </script>
+
 
 
 

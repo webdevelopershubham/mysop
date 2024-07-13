@@ -159,9 +159,40 @@
     background: var(--main);
     color: var(--second);
 }
-
+.sliders{
+    background: var(--main);
+    padding: 60px 5px;
+}
+.sliders .inner{
+    display: flex;
+    justify-content: space-between;    
+}
+.sliders .inner .counter{
+    position: relative;
+    width: 200px;
+    text-align: center;
+    color: var(--second);
+}
+.counter:not(:last-child)::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 70px;
+    background: var(--second);
+    top: 5%;
+    right: -12px;
+}
+.sliders .inner h4,
+.sliders .inner h4 span{    
+    font-size: 32px;
+    font-weight: 700;
+}
 .countrie-sec{
     background: var(--bacgrond);
+    padding: 50px 0;
+}
+.countrie-sec .heading{
+    margin: 0 0 50px 0;
 }
 .countrie-sec .country-text{
     padding: 0 180px;
