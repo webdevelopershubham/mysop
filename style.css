@@ -159,3 +159,30 @@
     background: var(--main);
     color: var(--second);
 }
+
+.countrie-sec{
+    background: var(--bacgrond);
+}
+.countrie-sec .country-text{
+    padding: 0 180px;
+    margin-bottom: 55px;
+}
+.countrie-sec span{
+    width: 100%;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.countrie-sec span img{
+    width: 100%;
+}
+.countrie-sec p{
+    text-align: center;
+    margin: 5px 0;
+}
+.countrie-sec .second-row{
+    display: flex;
+    justify-content: center;
+}
+
+
