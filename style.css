@@ -5,11 +5,13 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
 }
 :root{
     --main:#ff913b;
     --second:#fff;
     --bacgrond:#f4f6fb;
+    --bg-2:#f4f6fb;
 
 }
 #navbar{
@@ -27,6 +29,17 @@
 }
 #navbar .img-sec{
     text-align: center;
+    animation: slideLeft 1s ease forwards;
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 #navbar .img-sec a img{
     width: 60%;
@@ -36,6 +49,19 @@
     color: black;
     font-weight: 700;
     transition: 0.3s;
+    opacity: 0;
+    animation: sildeTop .5s forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+@keyframes sildeTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 #navbar .tab-links .tab-item{
     padding: 5px 10px;
@@ -110,7 +136,6 @@
     padding: 35px 0;
 }
 .service-area ul{
-    list-style: none;
     font-weight: 600;
     margin: 0;
     padding: 0;
@@ -260,4 +285,133 @@
 .guarantee .box p{
     font-size: 16px;
     font-weight: 500;
+}
+
+/*============ testimonial section ============*/
+
+/* .testimonial{
+    padding: 50px 0;
+} */
+.testimonial .texti-box h2{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    /* animation: leftSlide 3s ease; */
+}
+@keyframes leftSlide{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.testimonial .texti-box h2::before{
+    content: '';
+    position: absolute;
+    background: var(--main);
+    width: 18px;
+    height: 2px;
+    top: 9%;
+    left: -2%;
+}
+.testimonial .texti-box h2 span{
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--main);
+}
+.testimonial .texti-box li{
+    display: inline-block;
+    width: 45%;
+    padding: 10px;
+    text-align: center;
+}
+.testimonial .texti-box li img{
+    width: 100%;
+    margin-bottom: 10px ;
+}
+.testimonial .texti-box li span{
+    font-size: 25px;
+    font-weight: 700;
+}
+.testimonial .texti-box li .icon{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main);
+}
+.testimonial .texti-box-1{
+    background: var(--bg-2);
+}
+
+
+.tagline{
+    background: var(--main);
+    padding: 30px 40px;
+}
+.tagline .tag-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tagline .tag-box h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--second);
+}
+.tagline .tag-box p{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--second);
+}
+.tagline .read-more-sec{
+    margin: 0;
+}
+.tagline .read-more-sec a{
+    background: var(--second);
+    color: var(--main);
+}
+
+.guidebook{
+    padding: 20px 0 50px 0 ;
+}
+.guidebook .box{
+    border: 5px solid var(--main);
+    padding: 50px 80px;
+    background: var(--bacgrond);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.guidebook .box h3{
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--main);
+    text-align: center;
+}
+.guidebook .box h3{
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--main);
+    text-align: center;
+}
+.guidebook .box h4{
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.guidebook .box li{
+    list-style: circle;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.guidebook .box .form-tab-btn{
+    text-align: center;
+    margin: 60px 0 40px;
+}
+.guidebook .box .frm-btn{
+    background: var(--main);
 }
