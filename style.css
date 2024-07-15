@@ -83,9 +83,6 @@
 .head-sec .img-sec img{
     width: 80%;
 }
-/* .head-sec .head-text{
-    padding: 20px 0 0;
-} */
 .head-sec .head-text h3{
     font-size: 35px;
 }
@@ -289,9 +286,9 @@
 
 /*============ testimonial section ============*/
 
-/* .testimonial{
+.testimonial{
     padding: 50px 0;
-} */
+}
 .testimonial .texti-box h2{
     font-size: 42px;
     font-weight: 700;
@@ -344,7 +341,46 @@
 .testimonial .texti-box-1{
     background: var(--bg-2);
 }
+.testimonial .sub-text{
+    background: var(--bacgrond);
+}
+.testimonial .sub-text .item{
+    padding: 20px 180px 35px 40px;
+    text-align: justify;
+}
+.testimonial .sub-text::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 120px;
+    background: #8599cc3d;
+    transform: skew(-167deg, 350deg);
+    top: 21%;
+    right: 20%;
+}
+.testimonial .sub-text::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 120px;
+    background: #8599cc3d;
+    transform: skew(-167deg, 350deg);
+    top: 20%;
+    right: 15%;
+}
+.testimonial .sub-text .item h2{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.testimonial .sub-text .item p{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 
+/*============ tagline section ============*/
 
 .tagline{
     background: var(--main);
@@ -372,6 +408,8 @@
     background: var(--second);
     color: var(--main);
 }
+
+/*============ guidebook section ============*/
 
 .guidebook{
     padding: 20px 0 50px 0 ;
@@ -414,4 +452,389 @@
 }
 .guidebook .box .frm-btn{
     background: var(--main);
+}
+
+.guidebook .box .iti--allow-dropdown{
+    width: 100%;
+}
+
+/*============ footer section ============*/
+
+footer{
+    background: var(--bacgrond);
+    padding: 20px 0;
+    text-align: center;
+}
+footer span{
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+footer p{
+    margin: 5px;
+    color: var(--main);
+    font-weight: 600;
+}
+footer p a{
+    color: var(--main);
+}
+footer p a:hover{
+    color: var(--main);
+}
+
+/*============ Media QuerySection 768px ============*/
+
+@media only screen and (max-width:768px){
+    *{
+        font-size: 12px;
+    }
+    #navbar{
+        justify-content: space-between;
+    }
+    #navbar .img-sec a img{
+        width: 45%;
+    }
+    #navbar .tab-links a{
+        
+    }   
+
+    /*============ Head section ============*/
+
+    .head-sec .img-sec img{
+        width: 95%;
+    }
+    .head-sec .head-text h3{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .head-sec .head-text p{
+        font-size: 13px;
+    }
+    .head-sec .form-content{
+        margin-top: 22px;
+        padding: 20px 25px;        
+    }
+    .form-content .form-tab-btn{
+        margin: 25px 0 15px;
+    }
+    .form-content .form-tab-btn .frm-btn{
+        padding: 8px 20px;
+    }
+    .heading{   
+        margin: 30px;
+    }
+    .heading h3{
+        padding: 5px 32px;
+        font-size: 22px;
+    }
+    /*============ Services section ============*/
+
+
+    .service-area{
+        padding: 15px 0;
+    }
+    .service-area .service-content .content-box{
+    padding: 35px;
+    }
+    .service-content .content-box .content{
+        font-size: 12px;
+    }
+    .service-area .content-box .content-link{
+        margin: 18px 0 0 0;
+    }
+    .service-area .content-box .content-link .text{
+        font-size: 12px;
+    }
+    .service-area .content-box .content-link .icon{
+        padding: 6px 7px;
+        font-size: 12px;
+    }
+
+    /*============ Sliderts section ============*/
+
+    .sliders{
+        background: var(--main);
+        padding: 25px 10px;
+    }
+    .sliders .inner .counter{
+        width: 120px;
+    }
+    .counter:not(:last-child)::before{
+        width: 2px;
+        height: 60px;
+    }
+    .sliders .inner h4,
+    .sliders .inner h4 span{    
+        font-size: 22px;
+        font-weight: 700;
+    }
+    /*============ Countrie section ============*/
+
+    .countrie-sec{
+        padding: 40px 0;
+    }
+    .countrie-sec .heading{
+        margin: 0 0 30px 0;
+    }
+    .countrie-sec .country-text{
+        padding: 0 100px;
+        margin-bottom: 35px;
+    }
+    .read-more-sec{
+        margin: 30px 0 0 0;
+    }
+    .read-more-sec a{
+        padding: 8px 22px;
+    }
+    /*============ guarantee section ============*/
+
+    .guarantee{
+        padding-bottom: 25px;
+    }
+    .guarantee .box h4{
+        font-size: 18px;
+    }
+    .guarantee .box h4::before{
+        width: 80px;
+        height: 3px;
+        top: -6px;
+    }
+    .guarantee .box p{
+        font-size: 13px;
+    }
+    /*============ testimonial section ============*/
+
+    .testimonial{
+        padding: 30px 0;
+    }
+    .testimonial .texti-box h2{
+        font-size: 30px;
+        margin-bottom: 25px;
+        /* animation: leftSlide 3s ease; */
+    }
+    .testimonial .texti-box h2::before{
+        width: 15px;
+        height: 2px;
+        top: 6%;
+        left: -1%;
+    }
+    .testimonial .texti-box h2 span{
+        font-size: 30px;
+    }
+    .testimonial .texti-box li span{
+        font-size: 18px;
+    }
+    .testimonial .texti-box li .icon{
+        font-size: 18px;
+    }
+    .testimonial .sub-text .item{
+        padding: 15px 160px 0px 20px;
+    }
+    .testimonial .sub-text::before{
+        height: 80px;
+    }
+    .testimonial .sub-text::after{
+        height: 80px;
+    }
+    .testimonial .sub-text .item h2{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .testimonial .sub-text .item p{
+        font-size: 12px;
+    }
+    /*============ tagline section ============*/
+
+    .tagline{
+        background: var(--main);
+        padding: 20px 30px;
+    }
+    .tagline .tag-box h2{
+        font-size: 20px;
+    }
+    .tagline .tag-box p{
+        font-size: 12px;
+    }
+    /*============ guidebook section ============*/
+
+    .guidebook{
+        padding: 15px 0 30px 0 ;
+    }
+    .guidebook .box{
+        border: 3px solid var(--main);
+        padding: 30px 50px;
+    }
+    .guidebook .box h3{
+        font-size: 32px;
+    }
+    .guidebook .box h4{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .guidebook .box li{
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .guidebook .box .form-tab-btn{
+        margin: 30px 0 20px;
+    }
+
+    /*============ footer section ============*/
+
+    footer{
+        background: var(--bacgrond);
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+/*============ Media QuerySection 425px ============*/
+
+@media only screen and (max-width:768px){
+    #navbar{
+        justify-content: space-between;
+    }
+    #navbar .img-sec a img{
+        width: 45%;
+    }
+    #navbar .tab-links a{
+        
+    }   
+
+    /*============ Head section ============*/
+
+    .head-sec .img-sec
+    {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .head-sec .img-sec img{
+        width: 50%;        
+    }
+    .head-sec .head-text h3{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .head-sec .head-text p{
+        font-size: 12px;
+    }
+    .head-sec .form-content{
+        margin-top: 22px;
+        padding: 15px 40px;        
+    }
+    .heading{   
+        margin: 25px;
+    }
+    .heading h3{
+        padding: 5px 30px;
+        font-size: 20px;
+    }
+
+    /*============ Sliderts section ============*/
+
+    .sliders{
+        background: var(--main);
+        padding: 25px 10px;
+    }
+    .sliders .inner .counter{
+        width: 120px;
+    }
+    .counter:not(:last-child)::before{
+        width: 2px;
+        height: 60px;
+    }
+    .sliders .inner h4,
+    .sliders .inner h4 span{    
+        font-size: 22px;
+        font-weight: 700;
+    }
+    /*============ Countrie section ============*/
+
+    .countrie-sec{
+        padding: 30px 0;
+    }
+    .countrie-sec .heading{
+        margin: 0 0 20px 0;
+    }
+    .read-more-sec a{
+        padding: 8px 20px;
+    }
+    /*============ guarantee section ============*/
+
+    .guarantee .box{
+        padding: 0 50px;
+        margin-bottom: 30px;
+        /* border: 1px solid; */
+    }
+
+    /*============ testimonial section ============*/
+
+    .testimonial{
+        padding: 20px 0;
+    }
+    .testimonial .texti-box h2{
+        font-size: 30px;
+        margin-bottom: 25px;
+        /* animation: leftSlide 3s ease; */
+    }
+    .testimonial .texti-box h2::before{
+        top: 9%;
+    }
+    .testimonial .texti-box li span{
+        font-size: 18px;
+    }
+    .testimonial .sub-text .item{
+        padding: 15px 140px 0px 20px;
+    }
+    .testimonial .sub-text::before{
+        height: 80px;
+    }
+    .testimonial .sub-text .item h2{
+        font-size: 20px;
+    }
+    .testimonial .sub-text .item p{
+        font-size: 12px;
+    }
+    /*============ tagline section ============*/
+
+    .tagline{
+        background: var(--main);
+        padding: 20px 30px;
+    }
+    .tagline .tag-box h2{
+        font-size: 16px;
+    }
+    .tagline .tag-box p{
+        font-size: 11px;
+    }
+    /*============ guidebook section ============*/
+
+    .guidebook{
+        padding: 15px 0 30px 0 ;
+    }
+    .guidebook .box{
+        border: 3px solid var(--main);
+        padding: 20px 30px;
+    }
+    .guidebook .box h3{
+        font-size: 28px;
+    }
+    .guidebook .box h4{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .guidebook .box li{
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+    .guidebook .box .form-tab-btn{
+        margin: 30px 0 20px;
+    }
+
+    /*============ footer section ============*/
+
+    footer{
+        background: var(--bacgrond);
+        padding: 15px 0;
+        text-align: center;
+    }
 }
