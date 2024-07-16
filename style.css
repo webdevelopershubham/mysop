@@ -887,7 +887,7 @@ footer p a:hover{
 
 /*============ Media QuerySection 425px ============*/
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:375px){
     #navbar{
         justify-content: space-between;
     }
