@@ -751,7 +751,7 @@ footer p a:hover{
         flex-direction: column;
     } */
     .sliders .inner .counter{
-        width: 120px;
+        width: 110px;
     }
     .counter:not(:last-child)::before{
         width: 2px;
@@ -895,10 +895,6 @@ footer p a:hover{
 
     .head-sec .img-sec img{
         width: 80%;        
-    }
-
-    .sliders .inner .counter{
-        width: 110px;
     }
 
     .testimonial .sub-text .item{
