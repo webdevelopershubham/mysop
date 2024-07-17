@@ -26,6 +26,10 @@
     align-items: center;    
     background:var(--second);
     z-index: 2;
+
+}
+#navbar span{
+    display: none;
 }
 #navbar .img-sec{
     text-align: center;
@@ -132,7 +136,66 @@
 .service-area{
     padding: 35px 0;
 }
-.service-area ul{
+.service-area .tab{
+    display: block;
+    width: 100%;
+}
+.service-area .tab .tablink{
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--main);
+    text-align: start;
+    padding: 7px 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.service-area .tab .tablink.active{
+    color: var(--second);
+    background: var(--main);
+}
+.service-area .tab .tablink:focus{
+    outline: none;
+}
+.service-area .tab-data-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #fff;
+    padding: 25px 60px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.service-area .tabcontent{
+    display: none;
+}
+.service-area .tabcontent p{
+    font-size: 14px;
+    text-align: justify;    
+    margin-bottom: 45px;
+    color: #777;
+}
+.service-area a{
+    padding: 6px 0;
+    border: 1px solid var(--main);
+}
+.service-area .text{
+    padding: 6px 1px 0 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+.service-area .icon{
+    padding: 8px 10px;
+    background: var(--main);
+    color: var(--second);
+    font-weight: 600;
+    font-size: 15px;
+}
+.service-area .mob-view{
+    display: none;
+}
+
+/* .service-area ul{
     font-weight: 600;
     margin: 0;
     padding: 0;
@@ -185,7 +248,7 @@
     display: block;
     background: var(--main);
     color: var(--second);
-}
+} */
 
 /*============ Sliderts section ============*/
 
@@ -497,14 +560,18 @@ footer p a:hover{
         font-size: 12px;
     }
     #navbar{
-        justify-content: space-between;
+        padding: 0 10px;
+        height: 70px;
+    }
+    #navbar .img-sec{
+        width: 42%;
     }
     #navbar .img-sec a img{
-        width: 45%;
+        width: 55%;
     }
     #navbar .tab-links a{
-        
-    }   
+        margin: 0 3px;
+    }
 
     /*============ Head section ============*/
 
@@ -541,19 +608,21 @@ footer p a:hover{
     .service-area{
         padding: 15px 0;
     }
-    .service-area .service-content .content-box{
-    padding: 35px;
+    .service-area .tab .tablink{
+        padding: 6px 15px;
+        font-size: 11px;
     }
-    .service-content .content-box .content{
+    .service-area .tab-data-sec{
+        padding: 25px 40px;
+    }
+    .service-area .tabcontent p{    
+        margin-bottom: 30px;
+        font-size: 11px;
+    }
+    .service-area .text{
         font-size: 12px;
     }
-    .service-area .content-box .content-link{
-        margin: 18px 0 0 0;
-    }
-    .service-area .content-box .content-link .text{
-        font-size: 12px;
-    }
-    .service-area .content-box .content-link .icon{
+    .service-area .icon{
         padding: 6px 7px;
         font-size: 12px;
     }
@@ -701,17 +770,60 @@ footer p a:hover{
 
 @media only screen and (max-width:425px){
     #navbar{
-        justify-content: space-between;
+        height: 55px;
+    }
+    #navbar .img-sec{
+        width: 100%;
     }
     #navbar .img-sec a img{
-        width: 85%;
+        width: 55%;
     }
-    #navbar .tab-links a{
-        
-    }   
+    #navbar .mobTab{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        z-index: 5;
+        width: 0;
+        background: #111;
+        transition: 0.4s;
+        overflow: hidden;
+        /* padding: 60px 17px; */
+    }
+    #navbar .mobTab a:nth-child(2){
+        margin: 40px 0 0 0;
+    }
+    #navbar .mobTab a{
+        display: block;
+        padding: 8px 8px 8px 32px;
+        font-size: 18px;
+        color: var(--main);
+        margin: 5px 0;
+    }
+    #navbar .mobTab .closebtn{
+        position: absolute;
+        color: var(--main);
+        right: 3%;
+        font-size: 25px;
+        top: 1%;
+    }
+    #navbar .mobTab .tab-item{
+        display: inline-block;
+        margin: 8px 24px;
+    }
+    #navbar span{
+        color: var(--main);
+        font-size: 20px;
+        margin: 0px 25px;
+        cursor: pointer;
+        display: block;
+    }
 
     /*============ Head section ============*/
-
+    
+    .head-sec{
+        padding: 65px 0 25px;
+    }
     .head-sec .img-sec{
         text-align: center;
         margin-bottom: 10px;
@@ -741,6 +853,22 @@ footer p a:hover{
         font-size: 20px;
     }
 
+
+    /* .service-area .des-view{
+        display: none;
+    }
+    .service-area .mob-view{
+        display: block;
+    } */
+
+
+    .service-area .accordion-item{
+        border: 1px solid var(--main);
+    }
+    .service-area .accordion-item .accordion-button{
+        background: var(--main);
+        color: var(--second);
+    }
     /*============ Sliderts section ============*/
 
     .sliders{
@@ -774,6 +902,12 @@ footer p a:hover{
     .countrie-sec .heading{
         margin: 0 0 20px 0;
     }
+    .countrie-sec .one{
+        display: none;
+    }
+    .countrie-sec .two{
+        display: block;
+    }
     .countrie-sec .country-text{
         padding: 0 50px;
     }
@@ -785,7 +919,6 @@ footer p a:hover{
     .guarantee .box{
         padding: 0 50px;
         margin-bottom: 30px;
-        /* border: 1px solid; */
     }
 
     /*============ testimonial section ============*/
@@ -880,11 +1013,9 @@ footer p a:hover{
         padding: 15px 0;
         text-align: center;
     }
-    .countrie-sec .one{
-        display: none;
-    }
-    .countrie-sec .two{
-        display: block;
+    footer span{
+        font-size: 11px;
+        margin-bottom: 25px;
     }
 }
 
@@ -942,5 +1073,11 @@ footer p a:hover{
         margin-left: 1px;
     }.guidebook .iti__arrow{
         margin-left: 1px;
+    }
+    footer span{
+        font-size: 10px;
+    }
+    footer p,footer p a{
+        font-size: 11px;
     }
 }
