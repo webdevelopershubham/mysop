@@ -375,7 +375,7 @@
         opacity: 1;
     }
 }
-.testimonial .texti-box h2::before{
+/* .testimonial .texti-box h2::before{
     content: '';
     position: absolute;
     background: var(--main);
@@ -383,7 +383,7 @@
     height: 2px;
     top: 9%;
     left: -2%;
-}
+} */
 .testimonial .texti-box h2 span{
     font-size: 42px;
     font-weight: 700;
@@ -413,6 +413,7 @@
 }
 .testimonial .sub-text{
     background: var(--bacgrond);
+    position: relative;
 }
 .testimonial .sub-text .item{
     padding: 20px 180px 35px 40px;
@@ -528,6 +529,9 @@
 }
 .guidebook .inner-link input[type=tel]{
     padding-left: 89px !important;
+}
+.guidebook .inner-link .mob-email{
+    display: none;
 }
 
 /*============ footer section ============*/
@@ -785,9 +789,10 @@ footer p a:hover{
         min-height: 100vh;
         z-index: 5;
         width: 0;
-        background: #111;
+        background: var(--second);
         transition: 0.4s;
         overflow: hidden;
+        /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
         /* padding: 60px 17px; */
     }
     #navbar .mobTab a:nth-child(2){
@@ -818,15 +823,19 @@ footer p a:hover{
         cursor: pointer;
         display: block;
     }
-
+    #navbar span img{
+        width: 70%;
+        margin: 19px 0 0 0;
+    }
     /*============ Head section ============*/
     
     .head-sec{
         padding: 65px 0 25px;
     }
     .head-sec .img-sec{
-        text-align: center;
-        margin-bottom: 10px;
+        /* text-align: center;
+        margin-bottom: 10px; */
+        display: none;
     }
     .head-sec .img-sec img{
         width: 50%;        
@@ -839,7 +848,7 @@ footer p a:hover{
         font-size: 12px;
     }
     .head-sec .form-content{
-        margin-top: 22px;
+        margin: 22px 30px 0 ;
         padding: 15px 40px;        
     }
     .head-sec .form-content .iti{
@@ -879,7 +888,7 @@ footer p a:hover{
         flex-direction: column;
     } */
     .sliders .inner .counter{
-        width: 110px;
+        width: 124px;
     }
     .counter:not(:last-child)::before{
         width: 2px;
@@ -907,6 +916,9 @@ footer p a:hover{
     }
     .countrie-sec .two{
         display: block;
+    }
+    .countrie-sec .two .middle{
+        padding: 45px;
     }
     .countrie-sec .country-text{
         padding: 0 50px;
@@ -972,6 +984,7 @@ footer p a:hover{
     .guidebook .box{
         border: 3px solid var(--main);
         padding: 20px 30px;
+        margin: 0 30px;
     }
     .guidebook .box h3{
         font-size: 28px;
@@ -990,10 +1003,20 @@ footer p a:hover{
     .guidebook .inner-link .lst{
         margin-bottom: 28px;
     }
-    .guidebook .inner-link input[type=email]{
-        width: 100%;
+    .guidebook .inner-link .des-email{
+        display: none;
     }
-    .guidebook .inner-link input[type=tel]{
+    .guidebook .inner-link .mob-email{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .guidebook .inner-link input[type=email]{
+        width: 86%;
+    }
+    /* .guidebook .inner-link input[type=email]{
+        width: 100%;
+    } */
+    /* .guidebook .inner-link input[type=tel]{
         padding-left: 67px !important;
     }
     .guidebook .inner-link .iti__flag-container{
@@ -1005,7 +1028,7 @@ footer p a:hover{
     }
     .guidebook .iti__arrow{
         margin-left: 2px;
-    }
+    } */
     /*============ footer section ============*/
 
     footer{
@@ -1034,12 +1057,19 @@ footer p a:hover{
 
    /*============ guidebook section ============*/
 
+   .sliders .inner .counter{
+    width: 112px;
+    }
+    .sliders .inner .counter p{
+        font-size: 9px;
+    }
     .guidebook{
         padding: 15px 0 30px 0 ;
     }
     .guidebook .box{
         border: 3px solid var(--main);
         padding: 20px 30px;
+        margin: 20px 25px;
     }
     .guidebook .box h3{
         font-size: 28px;
@@ -1058,14 +1088,17 @@ footer p a:hover{
     .guidebook .inner-link .lst{
         margin-bottom: 12px;
     }
-    .guidebook .inner-link input[type=tel]{
+    .guidebook .inner-link input[type=email]{
+        width: 100%;
+    }
+    /* .guidebook .inner-link input[type=tel]{
         padding-left: 47px !important;
     }
     .guidebook .inner-link .iti__flag-container{
         width: 40%;
         padding: 0;
-    }
-    .guidebook .iti__flag.iti__in {
+    } */
+    /* .guidebook .iti__flag.iti__in {
         background-position: -2417px;
     }
     .guidebook .iti--separate-dial-code .iti__selected-dial-code{
@@ -1073,7 +1106,7 @@ footer p a:hover{
         margin-left: 1px;
     }.guidebook .iti__arrow{
         margin-left: 1px;
-    }
+    } */
     footer span{
         font-size: 10px;
     }
