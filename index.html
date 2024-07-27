@@ -516,6 +516,7 @@
         </div>
 
         <!-- ============== Countrie Section Mobile View  ============== -->
+         
         <div class="container two">
             <div class="row first-row">                
                 <div class="col-4">
@@ -597,7 +598,7 @@
                         </span>
                         <p>usa</p>
                     </div>
-                </div>                 -->
+                </div> -->
                 <div class="col-12 ">
                     <div class="read-more-sec">
                         <a href="https://api.whatsapp.com/send?phone=917827628006&amp;text=Hey!%20I%20need%20Admission%20SOP" class="btn">get more SOP</a>
@@ -798,27 +799,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="assets/js/intlTelInput.min.js"></script>
+
     <script>
+
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
           preferredCountries: ['in'],
           separateDialCode: true,
           utilsScript: "assets/js/utils.js",
         });
-    </script>
-
-    <script>
+    
+        
         var input = document.querySelector("#mobile");
         window.intlTelInput(input, {
           preferredCountries: ['in'],
           separateDialCode: true,
           utilsScript: "assets/js/utils.js",
         });
-    </script>
 
-    <!-- =============== counter script =============== -->
-
-    <script>
+        // =============== counter script ===============
 
         const counter = document.querySelectorAll(".counter span");
         const container = document.querySelector(".counter");
@@ -849,11 +848,8 @@
             }
         })
 
-    </script>
+        // =============== owl-carousel  ===============
 
-    <!-- =============== owl-carousel  =============== -->
-
-    <script>
         $(document).ready(function() {
             $('#main').owlCarousel({
             loop:true,
@@ -868,11 +864,9 @@
             }
             })
         });
-    </script>
 
-    <!-- =============== Tab-section script =============== -->
+        // =============== Tab-section script ===============
 
-    <script>
         function openData(evt, dataWise) {
 
         var i, tabcontent, tablinks;
@@ -889,9 +883,9 @@
         }
 
         document.getElementById("defaultOpen").click();
-    </script>
+    
+        // =============== Side-Nav script ===============
 
-    <script>
         function openNav() {
             document.getElementById("sideNav").style.width = "200px";
         }
@@ -899,6 +893,7 @@
         function closeNav() {
             document.getElementById("sideNav").style.width = "0";
         }
+
     </script>
 </body>
 </html>
